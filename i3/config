@@ -56,9 +56,9 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 # start appsd
-bindsym $mod+f2 exec google-chrome-stable
-bindsym $mod+f3 exec termite -e cmus
-bindsym $mod+f4 exec termite -e htop
+bindsym $mod+F2 exec google-chrome-stable
+bindsym $mod+F3 exec termite -e cmus
+bindsym $mod+F4 exec termite -e htop
 bindsym $mod+Shift+Tab exec "rofi -show window"
 bindsym $mod+0 exec light-locker-command -l
 bindsym $mod+n exec --no-startup-id thunar
