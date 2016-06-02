@@ -62,7 +62,7 @@ bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec termite -e cmus
 bindsym $mod+F4 exec termite -e htop
 bindsym $mod+Shift+Tab exec "rofi -show window"
-bindsym $mod+0 exec light-locker-command -l
+bindsym $mod+0 exec physlock -dm
 bindsym $mod+n exec --no-startup-id thunar
 bindsym $mod+Shift+f exec light
 bindsym $mod+Shift+a exec audacious
