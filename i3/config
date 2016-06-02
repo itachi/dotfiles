@@ -34,6 +34,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id compton -cCGb --backend glx --vsync opengl
+exec --no-startup-id udiskie -aT
+exec --no-startup-id pamac-tray
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
