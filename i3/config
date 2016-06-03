@@ -36,6 +36,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id compton -cCGb --backend glx --vsync opengl
 exec --no-startup-id udiskie -aT
 exec --no-startup-id pamac-tray
+exec --no-startup-id fcitx
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -57,7 +58,7 @@ bindsym $mod+Return exec termite
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start appsd
+# start apps
 bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec termite -e cmus
 bindsym $mod+F4 exec termite -e htop
@@ -66,6 +67,11 @@ bindsym $mod+0 exec physlock -dm
 bindsym $mod+n exec --no-startup-id thunar
 bindsym $mod+Shift+f exec light
 bindsym $mod+Shift+a exec audacious
+
+# Volume control with pulseaudio-ctl
+bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master +5%
+bindsym XF86AudioLowerVolume exec amixer -D pulse set Master -5%
+bindsym XF86AudioMute exec amixer -D pulse set Master mute
 
 bindsym $mod+d exec --no-startup-id rofi -show run
 
