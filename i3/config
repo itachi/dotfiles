@@ -38,6 +38,7 @@ exec --no-startup-id udiskie -aT
 exec --no-startup-id pamac-tray
 exec --no-startup-id fcitx
 exec --no-startup-id volumeicon
+exec --no-startup-id xautolock -time 8 -locker "physlock" 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -68,6 +69,7 @@ bindsym $mod+0 exec physlock -dm
 bindsym $mod+n exec --no-startup-id thunar
 bindsym $mod+Shift+f exec light
 bindsym $mod+Shift+a exec audacious
+bindsym $mod+Shift+9 exec scrot
 
 # Volume control with pulseaudio-ctl
 bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
