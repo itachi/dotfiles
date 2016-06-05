@@ -1,0 +1,3 @@
+case $BLOCK_BUTTON in
+    1) i3-msg layout tabbed | echo "<span font_desc='Ubuntu Condensed Bold 12px'>Alt+W</span>"
+esac

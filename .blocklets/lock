@@ -1,0 +1,5 @@
+case $BLOCK_BUTTON in
+    1) i3-msg "exec /usr/bin/lock"
+esac
+
+echo <span font_desc='FontAwesome'></span>

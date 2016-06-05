@@ -1,0 +1,4 @@
+case $BLOCK_BUTTON in
+    1) i3-msg kill | echo "<span font_desc='Ubuntu Condensed Bold 12px'>Alt+Shf+Q</span>"
+esac
+

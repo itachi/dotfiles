@@ -1,0 +1,14 @@
+if [[ -n $BLOCK_INSTANCE ]]; then
+    password=("-h" "$BLOCK_INSTANCE@localhost")
+fi
+
+filter() {
+    tr '\n' ' ' | grep -Po '.*(?= \[playing\])|paused' | tr -d '\n' | tr -d '-' | tr -d ',' | tr -d '.'| tr -d '/' | cut -c1-60
+}
+
+case $BLOCK_BUTTON in
+    3) mpc $password toggle | filter ;;  # right click, pause/unpause
+    4) mpc $password next   | filter ;;  # scroll up, next
+    5) mpc $password prev   | filter ;;  # scroll down, previous
+    *) mpc $password status | filter ;;
+esac
