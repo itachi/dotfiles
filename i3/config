@@ -86,7 +86,7 @@ bindsym $mod+F3 exec termite -e cmus
 bindsym $mod+F4 exec termite -e htop
 bindsym $mod+Shift+Tab exec "rofi -show window"
 bindsym $mod+0 exec physlock -dm
-bindsym $mod+n exec --no-startup-id thunar
+bindsym $mod+n exec --no-startup-id pcmanfm
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+a exec audacious
 bindsym $mod+Shift+9 exec scrot
@@ -238,7 +238,7 @@ for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down 34px
 assign [class="(?i)chrome"]			$tag2
 assign [class="(?i)termite"] 			$tag3
 assign [class="(?i)deluge"] 			$tag6
-assign [class="(?i)thunar"]			$tag8
+assign [class="(?i)pcmanfm"]			$tag8
 assign [class="(?i)light"]			$tag2
 assign [class="(?i)audacious"]			$tag7
 # Start i3bar to display a workspace bar (plus the system information i3status
