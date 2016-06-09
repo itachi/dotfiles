@@ -23,9 +23,28 @@ set $tag6 "6: torrent"
 set $tag7 "7: media"
 set $tag8 "8: misc"
 
+set_from_resource $darkred     color1  #000000
+set_from_resource $red         color9  #000000
+set_from_resource $darkgreen   color2  #000000
+set_from_resource $green       color10 #000000
+set_from_resource $darkyellow  color3  #000000
+set_from_resource $yellow      color11 #000000
+set_from_resource $darkblue    color4  #000000
+set_from_resource $blue        color12 #000000
+set_from_resource $darkmagenta color5  #000000
+set_from_resource $magenta     color13 #000000
+set_from_resource $darkcyan    color6  #000000
+set_from_resource $cyan        color14 #000000
+set_from_resource $darkwhite   color7  #000000
+set_from_resource $white       color15 #000000
+# Use custom colors for black
+set $black       #282828
+set $darkblack   #1d2021
+set $transparent #00000000
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Roboto Light 8
+font pango:Hack, FontAwesome 12
 
 # Startup applications
 
@@ -38,7 +57,8 @@ exec --no-startup-id udiskie -aT
 exec --no-startup-id pamac-tray
 exec --no-startup-id fcitx
 exec --no-startup-id volumeicon
-exec --no-startup-id xautolock -time 8 -locker "physlock -dm"
+#exec --no-startup-id xautolock -time 8 -locker "physlock -dm"
+exec --no-startup-id pulseaudio --start
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -67,17 +87,19 @@ bindsym $mod+F4 exec termite -e htop
 bindsym $mod+Shift+Tab exec "rofi -show window"
 bindsym $mod+0 exec physlock -dm
 bindsym $mod+n exec --no-startup-id thunar
-bindsym $mod+Shift+f exec light
+bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+a exec audacious
 bindsym $mod+Shift+9 exec scrot
 bindsym $mod+Shift+F12 exec --no-startup-id oblogout
 
-# Volume control with pulseaudio-ctl
-bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
-bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
-bindsym XF86AudioMute exec pulseaudio-ctl mute
+# volume controls
 
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
+bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
+bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/scripts/fullscreen_wrap.sh pavucontrol -t 3"
+
+bindsym $mod+d exec --no-startup-id rofi -show run -terminal termite -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90" -fuzzy
 
 # change focus
 bindsym $mod+j focus left
@@ -222,15 +244,29 @@ assign [class="(?i)audacious"]			$tag7
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	colors {
-		background #232323
-		statusline #dcdcdc
-		focused_workspace #ffffff #ffffff #000000
-		active_workspace #ffffff #ffffff #000000
-		inactive_workspace #232323 #232323 #dcdcdc
-	}
-	# i3bar position
-	position top
-	# load custom i3status.conf
-	status_command i3blocks -c ~/.config/i3blocks.conf
+#    verbose yes
+    status_command i3blocks -c ~/.config/i3blocks/config
+    i3bar_command i3bar -t
+    position top
+    font pango:Hack, FontAwesome 11
+    strip_workspace_numbers yes
+    separator_symbol "■"
+    bindsym button4 nop
+    bindsym button5 nop
+    tray_output eDP1
+    tray_output LVDS-0
+    tray_padding 0
+    height 27
+    colors {
+        statusline         $white
+        background         $transparent
+        separator          $transparent
+
+#                          BORDER       BACKGROUND   TEXT
+        focused_workspace  $transparent $transparent $darkwhite
+        inactive_workspace $transparent $transparent $white
+        active_workspace   $transparent $transparent $white
+        urgent_workspace   $darkred     $darkred     $transparent
+        binding_mode       $darkred     $darkred     $transparent
+    }
 }
