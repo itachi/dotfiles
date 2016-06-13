@@ -57,8 +57,9 @@ exec --no-startup-id udiskie -aT
 exec --no-startup-id pamac-tray
 exec --no-startup-id fcitx
 exec --no-startup-id volumeicon
-#exec --no-startup-id xautolock -time 8 -locker "physlock -dm"
+exec --no-startup-id xautolock -time 7 -locker "ob_blurlock"
 exec --no-startup-id pulseaudio --start
+exec --no-startup-id dunst &
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -76,6 +77,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec termite
+bindsym $mod+Shift+Return exec lxterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -84,13 +86,16 @@ bindsym $mod+Shift+q kill
 bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec termite -e cmus
 bindsym $mod+F4 exec termite -e htop
+bindsym $mod+F5 exec termite -e nmtui
+bindsym $mod+Shift+o exec libreoffice
 bindsym $mod+Shift+Tab exec "rofi -show window"
-bindsym $mod+0 exec physlock -dm
+bindsym $mod+0 exec ob_blurlock
 bindsym $mod+n exec --no-startup-id pcmanfm
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+a exec audacious
 bindsym $mod+Shift+9 exec scrot
-bindsym $mod+Shift+F12 exec --no-startup-id oblogout
+bindsym $mod+Shift+d exec deluge
+bindsym $mod+Shift+F12 exec --no-startup-id oblogout_blur
 
 # volume controls
 
@@ -99,7 +104,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.p
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
 bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/scripts/fullscreen_wrap.sh pavucontrol -t 3"
 
-bindsym $mod+d exec --no-startup-id rofi -show run -terminal termite -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90" -fuzzy
+bindsym $mod+d exec --no-startup-id rofi -show run -font "FontAwesome 10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85
 
 # change focus
 bindsym $mod+j focus left
@@ -229,6 +234,8 @@ for_window [window_type="menu"] floating enable
 
 for_window [instance="oblogout"] floating enable
 for_window [instance="VirtualBox"] floating enable
+for_window [instance="vlc"] floating enable, border normal, move position mouse
+for_window [instance="mpv"] floating enable, border normal, move position mouse
 
 for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
 
@@ -237,10 +244,16 @@ for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down 34px
 
 assign [class="(?i)chrome"]			$tag2
 assign [class="(?i)termite"] 			$tag3
+assign [class="(?i)lxterminal"]			$tag3
 assign [class="(?i)deluge"] 			$tag6
 assign [class="(?i)pcmanfm"]			$tag8
-assign [class="(?i)light"]			$tag2
+assign [class="(?i)firefox"]			$tag2
 assign [class="(?i)audacious"]			$tag7
+assign [class="(?i)vlc"]			$tag7
+assign [class="(?i)mpv"]			$tag7
+assign [class="(?i)libreoffice"]		$tag4
+assign [class="(?i)light"]			$tag2
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
