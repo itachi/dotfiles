@@ -30,10 +30,10 @@
     #word_chars = -A-Za-z0-9,./?%&#:_=+@~
 
 [colors]
-    foreground = #B3B30C
+    foreground = #968E75
     #foreground_bold = #ffffff
     #foreground_dim = #888888
-    background = rgba(25, 25, 25, 0.7)
+    background = rgba(22, 22, 22, 0.9)
     cursor = #D4D4D4
 
     # if unset, will reverse foreground and background
