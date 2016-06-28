@@ -9,7 +9,7 @@ use_spacer none
 
 
 TEXT
-${if_mpd_playing}${mpd_artist}   ${mpd_title}${endif}     \
+ ${if_mpd_playing}${mpd_artist}   ${mpd_title}${endif}     \
    ${downspeedf wlp4s0} | ${upspeedf wlp4s0}     \
 Battery: ${battery_percent BAT0}%  \
   ${wireless_link_qual_perc wlp4s0}  ${wireless_essid wlp4s0}     \
