@@ -4,10 +4,27 @@ audio_device_state:1:FIFO for NCMPCPP
 state: stop
 random: 0
 repeat: 0
-single: 0
+single: 1
 consume: 0
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
+0:Japanese/hanazawa kana/[2007-2014] Various Anime Discography/Tracks from Compilations/[2014.11.26][OST] Ryuugajou Nanana no Maizoukin Character Song & Soundtrack CD Vol.6/01. Gyutto CHERISH.mp3
+1:Japanese/hanazawa kana/[2007-2014] Various Anime Discography/Tracks from Compilations/[2014.11.26][OST] Ryuugajou Nanana no Maizoukin Character Song & Soundtrack CD Vol.6/02. Gyutto CHERISH (Instrumental Ver.).mp3
+2:Japanese/hanazawa kana/[2007-2014] Various Anime Discography/Character Singles/[2014.12.28] White Gift/01. White Gift.mp3
+3:Japanese/hanazawa kana/[2007-2014] Various Anime Discography/Character Singles/[2014.12.28] White Gift/02. White Gift -Inst-.mp3
+4:Japanese/hanazawa kana/[2007-2014] Various Anime Discography/Tracks from Compilations/[2014.08.27][Character Single] Nagi no Asukara Character Song CD3/02. Nami no Ne, Umi no Koe.mp3
+5:Green Day/Singles/2009 - 21 Guns (W817)/01. 21 Guns.mp3
+6:Green Day/Singles/2009 - 21 Guns (W817)/02. Favorite Son.mp3
+7:metal/Lamb Of God/(2000) New American Gospel/01. Lamb Of God - [New American Gospel] Black Label (288 KBps).mp3
+8:metal/Lamb Of God/(2000) New American Gospel/02. Lamb Of God - [New American Gospel] A Warning (304 KBps).mp3
+9:metal/Lamb Of God/(2000) New American Gospel/03. Lamb Of God - [New American Gospel] In The Absence Of Sacred (247 KBps).mp3
+10:metal/Lamb Of God/(2000) New American Gospel/04. Lamb Of God - [New American Gospel] Letter To The Unborn (270 KBps).mp3
+11:metal/Lamb Of God/(2000) New American Gospel/05. Lamb Of God - [New American Gospel] The Black Dahlia (261 KBps).mp3
+12:metal/Lamb Of God/(2000) New American Gospel/06. Lamb Of God - [New American Gospel] Terror And Hubris In The House Of Frank Pollard (283 KBps).mp3
+13:metal/Lamb Of God/(2000) New American Gospel/07. Lamb Of God - [New American Gospel] The Subtle Arts Of Murder And Persuasion (292 KBps).mp3
+14:metal/Lamb Of God/(2000) New American Gospel/08. Lamb Of God - [New American Gospel] Pariah (294 KBps).mp3
+15:metal/Lamb Of God/(2000) New American Gospel/09. Lamb Of God - [New American Gospel] Confessional (284 KBps).mp3
+16:metal/Lamb Of God/(2000) New American Gospel/10. Lamb Of God - [New American Gospel] O.D.H.G.A.B.F.E. (295 KBps).mp3
 playlist_end
