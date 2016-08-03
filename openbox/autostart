@@ -1,0 +1,26 @@
+
+# panel
+tint2 &
+
+# Set wallpaper
+(sleep 2 && feh --bg-scale ~/Pictures/wallpapers/nase_mitsuki.png) &
+
+# Enable as required
+xbacklight -set 35 &
+#/usr/bin/synclient TouchpadOff=1 &
+#setxkbmap us &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Networking system tray applet
+(sleep 3 && nm-applet) &
+
+# Volume control
+(sleep 3 && volumeicon) &
+
+# Onscreen system stats
+(sleep 2 && conky) &
+
+# Effects
+#(sleep 2 && compton -b) &
+
+(sleep 2 && xfce4-power-manager) &
