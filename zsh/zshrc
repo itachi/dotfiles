@@ -9,7 +9,8 @@ setopt correctall
 # prompt
 autoload -U promptinit
 promptinit
-prompt suse
+prompt off
+export PS1="> "
 
 ### Keybinding
 unsetopt MULTIBYTE
