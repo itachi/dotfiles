@@ -22,8 +22,9 @@ exec --no-startup-id compton -cCGb --backend glx --vsync opengl
 exec --no-startup-id volumeicon
 exec --no-startup-id pamac-tray
 exec --no-startup-id dunst &
-exec --no-startup-id xautolock -time 5 -locker i3lock-fancy
-exec_always feh --bg-scale ~/Pictures/Wallpapers/wall1.jpg 
+exec --no-startup-id xautolock -time 5 -locker physlock
+exec --no-startup-id xfce4-power-manager
+exec_always feh --bg-fill ~/Pictures/Wallpapers/wallpaper_01_by_shirayuri_site-d5aui4v.png 
 
 # start apps
 
@@ -33,20 +34,20 @@ bindsym $mod+F5 exec termite -e nmtui
 bindsym $mod+Shift+o exec libreoffice
 bindsym $mod+Shift+w exec wps
 bindsym $mod+Shift+Tab exec "rofi -show window"
-bindsym $mod+0 exec i3lock-fancy
-bindsym $mod+n exec pcmanfm
+#bindsym $mod+0 exec i3lock-fancy
+bindsym $mod+n exec thunar
 bindsym $mod+Shift+g exec google-chrome-unstable
-bindsym $mod+Shift+f exec firefox-aurora
-bindsym $mod+Shift+d exec deadbeef
+bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+d exec lollypop
 bindsym $mod+Shift+9 exec scrot
 bindsym $mod+Shift+t exec transmission-gtk
 bindsym $mod+Shift+F12 exec --no-startup-id oblogout
-#bindsym $mod+Ctrl+l exec physlock -dm
+bindsym $mod+Ctrl+l exec physlock -dm
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 
-bindsym $mod+d exec dmenu_run -b -fn terminus -nb black -nf darkgrey -sf black -sb darkgrey
+bindsym $mod+d exec exec rofi -show run -fullscreen -width 100 -padding 250 -font "Terminus 16" -line-margin 5 -lines 10 -separator-style solid -opacity "90"
 
 # change focus
 bindsym $mod+j focus left
@@ -195,11 +196,11 @@ gaps outer 7
 #options
 new_window none
 for_window [class="^.*"] border pixel 0.5
-workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth no
 force_display_urgency_hint 0 ms
 focus_on_window_activation urgent
 popup_during_fullscreen smart
-focus_follows_mouse no
+focus_follows_mouse yes
 
 no_focus [window_role="pop-up"]
 
@@ -228,18 +229,18 @@ client.urgent               #dca3a3 #dca3a3 #DCDCCC #3f3f3f
 bar {
         status_command conky -c $HOME/.config/conky/conkyrc
 	mode dock
-	position top
-	font pango:Raleway 8
+	position bottom
+	font pango:Terminus 8
 	strip_workspace_numbers yes
 colors {
-        background #454545
-        statusline #ffffff
-        separator #51c4d4
+		background #222222
+		statusline #dddddd
+		separator #666666
 
-        focused_workspace  #ecedee #ecedee #454545
-        active_workspace   #ecedee #ecedee #454545
-        inactive_workspace #454545 #454545 #ffffff
-        urgent_workspace   #454545 #454545 #ffffff
+		focused_workspace  #0088cc #0088cc #ffffff
+		active_workspace   #333333 #333333 #888888
+		inactive_workspace #333333 #333333 #888888
+		urgent_workspace   #2f343a #900000 #ffffff
     }
 }
 
