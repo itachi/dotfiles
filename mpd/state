@@ -1,8 +1,9 @@
 sw_volume: 98
 audio_device_state:1:My ALSA Device
 audio_device_state:1:FIFO for NCMPCPP
-state: stop
-current: 9
+state: play
+current: 12
+time: 120.012000
 random: 0
 repeat: 0
 single: 0
@@ -11,22 +12,24 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Japanese/Aqours/Aqours - Yume Kataruyori Yume Utaou/01. ユメ語るよりユメ歌おう.mp3
-1:Japanese/Aqours/Aqours - Yume Kataruyori Yume Utaou/02. サンシャインぴっかぴか音頭.mp3
-2:Japanese/Aqours/Aqours - Yume Kataruyori Yume Utaou/03. ユメ語るよりユメ歌おう (Off Vocal).mp3
-3:Japanese/Aqours/Aqours - Yume Kataruyori Yume Utaou/04. サンシャインぴっかぴか音頭 (Off Vocal).mp3
-4:Japanese/LiSA/Single (LiSA)/LiSA – Brave Freak Out (Single)/01. Brave Freak Out.mp3
-5:Japanese/LiSA/Single (LiSA)/LiSA – Brave Freak Out (Single)/02. AxxxiS.mp3
-6:Japanese/LiSA/Single (LiSA)/LiSA – Brave Freak Out (Single)/03. シャッフル.mp3
-7:Japanese/LiSA/Single (LiSA)/LiSA – Brave Freak Out (Single)/04. Brave Freak Out -TV Ver.-.mp3
-8:Japanese/OST Anime/Stay Alive  Emilia (CV Rie Takahashi) (Single)/01. Stay Alive.mp3
-9:Japanese/OST Anime/Stay Alive  Emilia (CV Rie Takahashi) (Single)/02. Wishing.mp3
-10:Japanese/OST Anime/Stay Alive  Emilia (CV Rie Takahashi) (Single)/03. ぼうやの夢よ.mp3
-11:Japanese/OST Anime/Stay Alive  Emilia (CV Rie Takahashi) (Single)/04. Stay Alive (Instrumental).mp3
-12:Japanese/OST Anime/Stay Alive  Emilia (CV Rie Takahashi) (Single)/05. Wishing (Instrumental).mp3
-13:Japanese/OST Anime/Stay Alive  Emilia (CV Rie Takahashi) (Single)/06. ぼうやの夢よ (Instrumental).mp3
-14:Disreign/1st Single - Until The Fade/Until the Fade.m4a
-15:Disreign/2nd Single - Karehasu/01 枯れ蓮.m4a
-16:Disreign/2nd Single - Karehasu/02 Genesis.m4a
-17:Disreign/2nd Single - Karehasu/03 Black Sun Apocalypse.m4a
+0:Japanese/Alisa Takigawa/Album/at film/01 Season.m4a
+1:Japanese/Alisa Takigawa/Album/at film/02 BOY'S CHRONICLE.m4a
+2:Japanese/Alisa Takigawa/Album/at film/03 さよならのゆくえ.m4a
+3:Japanese/Alisa Takigawa/Album/at film/04 色褪せない瞳.m4a
+4:Japanese/Alisa Takigawa/Album/at film/05 日々モノクローム.m4a
+5:Japanese/Alisa Takigawa/Album/at film/06 プラネタリウム.m4a
+6:Japanese/Alisa Takigawa/Album/at film/07 Again.m4a
+7:Japanese/Alisa Takigawa/Album/at film/08 Sugar.m4a
+8:Japanese/Alisa Takigawa/Album/at film/09 夏の花.m4a
+9:Japanese/Alisa Takigawa/Album/at film/10 17番地.m4a
+10:Japanese/Alisa Takigawa/Album/at film/11 Journey.m4a
+11:Japanese/Alisa Takigawa/Album/at film/12 アイセイハローのすべて.m4a
+12:Japanese/Alisa Takigawa/Album/at film/13 花束.m4a
+13:Japanese/Alisa Takigawa/Album/at film/14 The Seven Deadly Sins Medley.m4a
+14:Japanese/angela x fripSide/僕は僕であって/僕は僕であって.mp3
+15:Japanese/angela x fripSide/僕は僕であって/僕は僕であって (TV size).mp3
+16:Japanese/angela x fripSide/僕は僕であって/僕は僕であって (off vocal version).mp3
+17:Japanese/Asakura Momo/Ashita wa Kimi to/01 明日は君と。.m4a
+18:Japanese/Asakura Momo/Ashita wa Kimi to/02 花に赤い糸.m4a
+19:Japanese/Asakura Momo/Ashita wa Kimi to/03 明日は君と。 (Instrumental).m4a
 playlist_end
